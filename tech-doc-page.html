@@ -10,14 +10,37 @@
     <body>
         <main id="main-doc">
             <section class="main-section" id="What_is_git">
-                <header>What is git</header>
+                <header>What is Git and Github</header>
                 <p>
                     Git is a tool for keeping track of code changes.
-                    Using git you can more easily create different versions of your code and work 
-                    on these different versions simultaneoulsy with other developers. Git allows 
-                    you to simply revert back to previous versions of your code or work on improving 
-                    parts of your code in branches without changing the main branch. This can allow 
-                    for bug fixes that can be fully tested before being rolled out to users.
+                </p>
+                <p>
+                    Git is a type of distributed version control system. 
+                </p>
+                <p>
+                    Github is a platform that stores your Git projects in an online repository.
+                </p>
+                <p>
+                    In computer science a distributed system is a system where data or tasks are stored or carried out
+                    across multiple devices. For software version control systems this can mean a clone of the repository 
+                    of code is stored on every developers local machine.
+                </p> 
+                    A version control system is a system that tracks any changes made to files and folders and for 
+                    these changes to be easily reversible and auditable.
+                </p>
+                <p>
+                    Using Git you can more easily create different versions of your code and work 
+                    on these different versions simultaneously with other developers. 
+                </p>
+                <p>    
+                    If mistakes are made and the code stops behaving as expected you can use Git to revert back to 
+                    previous versions of your code.
+                </p>
+                <p>    
+                    Git allows you to work on improving parts of your code in "branches".
+                    In branches code changes can be tested without affecting the production code. Branches can allow for bug 
+                    fixes that can be fully tested before being rolled out to users. Branches can also be used to create 
+                    and test out new features.
                 </p>
             </section>
             <section class="main-section" id="Basic_git_workflow">
@@ -25,13 +48,34 @@
                 <p>
                     Below is a basic workflow for using git on a daily basis
                 </p>
-                <ul>
-                    <li>Write code</li>
-                    <li>Check status - git status</li>
-                    <li>Stage changes - git add .(everything) or filename (parts of a file can also be added)</li>
-                    <li>Commit changes - git commit</li>
-                    <li>Push changes - git push (push changes up to a repository)</li>
-                </ul>
+                <ol type="1">
+                    <li>Write code<code>print("Hello world")</code></li>
+                    <li>Check status <code>:git status</code>
+                    <p>
+                        Checking the status of your files shows which files are staged for commiting to the repository,
+                        which files are yet to be staged to the repository and which files are not being tracked by the 
+                        repository.
+                    </p> </li>
+                    <li>Stage changes<code>:git add . or filename</code>
+                        <p>
+                            Staging the changes is where you select which changes are going to be added to the repository
+                            on the next commit to the repository. All changes or individual file changes or parts of file changes
+                            can be added. Keeping the commits small and of the same topic helps to make reviewing changes easier.
+                        </p>
+                    </li>
+                    <li>Commit changes<code>:git commit -m"Brief code change description" -m"more detailed description"</code>
+                        <p>
+                            Commiting the changes is where the changes are added to the local repository. This stage should
+                            include a message to detail what changes have been made to make reviewing commits easier. 
+                        </p>
+                    </li>
+                    <li>Push changes<code>:git push</code>
+                        <p>
+                            Push changes is when the recent commits are pushed up to the online repository. For example Github.
+                        </p>
+                    </li>
+                </ol>
+             
                 </section>
             </section>
             <section class="main-section" id="Github">
@@ -45,13 +89,38 @@
             <section class="main-section" id="Pulling_down_a_repository">
                 <header>Pulling down a repository</header>
                 <p>
-                    :git cd ../localdirectory - change directory to the relevant local directory
-
-
+                    When first starting to work on a project with other developers you will need to 
+                    pull down the existing files from the repository. See below...
                 </p>
-                
+                <ol type ="1">
+                    <li>Change Directory<code>:git cd ../localdirectory</code> change directory to the relevant local directory 
+                        where you want the repository to be stored</li>
+                    <li>Clone the Repostiory<code>:git clone html_url</code> clone the repository</li>
+                    <li>Change in to the Repository Folder<code>:cd repo_folder</code> change into the repository folder</li>
+                    <li>Master Branch<code>(master): </code>this shows you are in the repository</li>
+                    <li>Checking files and folders in the Repo<code>(master): ls -la </code>lists all folders in the current directory including
+                        the hidden git folder</li>
+                </ol>
             </section>
-            <section class="main-section">
+            <section class="main-section" id="Creating_a_new_repository">
+                <header>Creating a new repository</header>
+                <p>
+                    Creating a new repository maybe necessary if you are working on a new project.
+                </p>
+                <p>
+                    Start by creating a new folder on your local machine. 
+                    There can already be files in this folder that you wish to start
+                    tracking.
+                </p>
+                <ol type="1">
+                    <li>Change Directory<code>:git cd ../localdirectory</code> Change directory to the relevant local directory </li>
+                    <li>Intialise git<code>:git init</code>Intialise a repository in this folder</li>
+                    <li>Status<code>(master):git status </code> Shows untracked folders and files in the repository</li>
+                    <li>Add<code>(master):git add . or trackme_file</code> Add relevant files to be commited</li>
+                    <li><code>(master):git remote add origin git@github.com:repo_html</code></li>
+                    <li><code>(master):git remote add origin git@github.com:repo_html</code></li>
+                    <li><code>(master):git remote add origin git@github.com:repo_html</code></li>
+                </ol>
                 
             </section>
         </main>
